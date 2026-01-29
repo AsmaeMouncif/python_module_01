@@ -1,17 +1,29 @@
 class Plant:
-    def __init__(self, name, height, age_days):
+    """A class representing a plant that can age and grow."""
+
+    def __init__(self, name: str, height: int, age_days: int) -> None:
+        """Initialize a Plant with name, height, and age.
+
+        Args:
+            name: The name of the plant.
+            height: The height of the plant in centimeters.
+            age_days: The age of the plant in days.
+        """
         self.name = name
         self.height = height
         self.age_days = age_days
         self.height_initial = height
 
-    def age(self):
+    def age(self) -> None:
+        """Increment the plant's age by one day."""
         self.age_days += 1
 
-    def grow(self):
+    def grow(self) -> None:
+        """Increment the plant's height by one centimeter."""
         self.height += 1
 
-    def get_info(self):
+    def get_info(self) -> None:
+        """Display information about the plant."""
         print(f"{self.name}: {self.height}cm, {self.age_days} days old")
 
 
