@@ -12,7 +12,6 @@ class Plant:
         self.name = name
         self.height = height
         self.age_days = age_days
-        self.height_initial = height
 
     def age(self) -> None:
         """Increment the plant's age by one day."""
@@ -28,6 +27,8 @@ class Plant:
 
 
 plant = Plant("Rose", 25, 30)
+initial_height = plant.height
+
 
 print("=== Day 1 ===")
 plant.get_info()
@@ -41,4 +42,4 @@ while day < 6:
 print("=== Day 7 ===")
 plant.get_info()
 
-print(f"Growth this week: +{plant.height - plant.height_initial}cm")
+print(f"Growth this week: +{plant.height - initial_height}cm")
